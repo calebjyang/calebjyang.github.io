@@ -77,24 +77,25 @@ export default function Home() {
               </div>
               <div className="screen p-4">
                 <div className="terminal font-mono text-sm bg-[#0b0f0e] border border-white/6 rounded-[14px] p-4 text-yellow min-h-[220px] relative overflow-auto">
-                  <div>$ npm run dev<span className="caret inline-block w-2 h-[1.1em] bg-yellow ml-1 animate-blink" /></div>
+                  <div>$ npm run caleb</div>
                   <div className="mt-2.5 text-muted">&gt; next dev — ready on <span className="text-teal">http://localhost:3000</span></div>
-                  <div>&gt; connected to firebase (prod)</div>
+                  <div>&gt; connected to production branch...</div>
                   <div>&gt; loading: <span className="text-peach">AAConnect</span>, <span className="text-peach">WebRegRet</span>, <span className="text-peach">Texas Hold Your Horses</span></div>
-                  <div className="mt-3 text-muted">&gt; tip: press <span className="text-yellow">?</span> in the nav ;)</div>
+                  <div className="mt-3 text-muted">&gt; enjoy your stay ;)</div>
+                  <div className="mt-2">$ <span className="caret inline-block w-2 h-[1.1em] bg-yellow ml-1 animate-blink align-text-bottom" /></div>
                 </div>
               </div>
             </div>
           </section>
 
           {/* Projects Section */}
-          <section id="projects" className="section px-6 py-9" aria-labelledby="proj">
+          <section id="projects" className="section px-4 sm:px-6 py-6 sm:py-9" aria-labelledby="proj">
             <h2 id="proj" className="text-2xl m-0 mb-3.5 tracking-wide">Selected Projects</h2>
-            <div className="projects grid grid-cols-12 gap-4">
+            <div className="projects grid grid-cols-1 sm:grid-cols-2 gap-4">
               {/* Project 1 */}
-              <article className="card col-span-6 min-[820px]:col-span-6 col-span-12 bg-paper border border-white/6 rounded-custom p-4 shadow-custom transition-all duration-150 hover:-translate-y-0.5 hover:border-white/12">
-                <a className="thumb block aspect-video rounded-xl overflow-hidden bg-gradient-to-br from-teal/18 to-peach/18 border border-white/6" href="#" aria-label="AAConnect preview" />
-                <h3 className="m-3 mb-1.5">AAConnect</h3>
+              <article className="card bg-paper border border-white/6 rounded-custom p-3 sm:p-4 shadow-custom transition-all duration-150 hover:-translate-y-0.5 hover:border-white/12">
+                <a className="thumb block aspect-video rounded-xl overflow-hidden bg-gradient-to-br from-teal/18 to-peach/18 border border-white/6 mb-3" href="#" aria-label="AAConnect preview" />
+                <h3 className="m-0 mb-1.5">AAConnect</h3>
                 <p className="m-0 text-muted">Next.js + Firebase app to centralize fellowship events, signups, and ride coordination with an auto‑carpool algorithm.</p>
                 <div className="chips flex gap-2 flex-wrap mt-2.5">
                   <span className="chip inline-flex items-center gap-2 font-mono text-xs text-muted bg-[#0f1312] px-2.5 py-1.5 rounded-full border border-white/6">Next.js</span>
@@ -105,9 +106,9 @@ export default function Home() {
               </article>
 
               {/* Project 2 */}
-              <article className="card col-span-6 min-[820px]:col-span-6 col-span-12 bg-paper border border-white/6 rounded-custom p-4 shadow-custom transition-all duration-150 hover:-translate-y-0.5 hover:border-white/12">
-                <a className="thumb block aspect-video rounded-xl overflow-hidden bg-gradient-to-br from-teal/18 to-peach/18 border border-white/6" href="#" aria-label="WebRegRet preview" />
-                <h3 className="m-3 mb-1.5">WebRegRet</h3>
+              <article className="card bg-paper border border-white/6 rounded-custom p-3 sm:p-4 shadow-custom transition-all duration-150 hover:-translate-y-0.5 hover:border-white/12">
+                <a className="thumb block aspect-video rounded-xl overflow-hidden bg-gradient-to-br from-teal/18 to-peach/18 border border-white/6 mb-3" href="#" aria-label="WebRegRet preview" />
+                <h3 className="m-0 mb-1.5">WebRegRet</h3>
                 <p className="m-0 text-muted">A quirky UCI tuition‑waste calculator — crisp UI, clear messaging, and surprisingly useful insights for students.</p>
                 <div className="chips flex gap-2 flex-wrap mt-2.5">
                   <span className="chip inline-flex items-center gap-2 font-mono text-xs text-muted bg-[#0f1312] px-2.5 py-1.5 rounded-full border border-white/6">TypeScript</span>
@@ -117,9 +118,9 @@ export default function Home() {
               </article>
 
               {/* Project 3 */}
-              <article className="card col-span-6 min-[820px]:col-span-6 col-span-12 bg-paper border border-white/6 rounded-custom p-4 shadow-custom transition-all duration-150 hover:-translate-y-0.5 hover:border-white/12">
-                <a className="thumb block aspect-video rounded-xl overflow-hidden bg-gradient-to-br from-teal/18 to-peach/18 border border-white/6" href="#" aria-label="Texas Hold Your Horses preview" />
-                <h3 className="m-3 mb-1.5">Texas Hold Your Horses</h3>
+              <article className="card bg-paper border border-white/6 rounded-custom p-3 sm:p-4 shadow-custom transition-all duration-150 hover:-translate-y-0.5 hover:border-white/12">
+                <a className="thumb block aspect-video rounded-xl overflow-hidden bg-gradient-to-br from-teal/18 to-peach/18 border border-white/6 mb-3" href="#" aria-label="Texas Hold Your Horses preview" />
+                <h3 className="m-0 mb-1.5">Texas Hold Your Horses</h3>
                 <p className="m-0 text-muted">Multiplayer web‑based card game with horse‑race‑themed betting rounds and real‑time play.</p>
                 <div className="chips flex gap-2 flex-wrap mt-2.5">
                   <span className="chip inline-flex items-center gap-2 font-mono text-xs text-muted bg-[#0f1312] px-2.5 py-1.5 rounded-full border border-white/6">WebSockets</span>
@@ -129,9 +130,9 @@ export default function Home() {
               </article>
 
               {/* Project 4 */}
-              <article className="card col-span-6 min-[820px]:col-span-6 col-span-12 bg-paper border border-white/6 rounded-custom p-4 shadow-custom transition-all duration-150 hover:-translate-y-0.5 hover:border-white/12">
-                <a className="thumb block aspect-video rounded-xl overflow-hidden bg-gradient-to-br from-teal/18 to-peach/18 border border-white/6" href="#" aria-label="Kernel Simulator preview" />
-                <h3 className="m-3 mb-1.5">Wordle AI Solver</h3>
+              <article className="card bg-paper border border-white/6 rounded-custom p-3 sm:p-4 shadow-custom transition-all duration-150 hover:-translate-y-0.5 hover:border-white/12">
+                <a className="thumb block aspect-video rounded-xl overflow-hidden bg-gradient-to-br from-teal/18 to-peach/18 border border-white/6 mb-3" href="#" aria-label="Kernel Simulator preview" />
+                <h3 className="m-0 mb-1.5">Wordle AI Solver</h3>
                 <p className="m-0 text-muted">A Python script that uses an entropy-based information theory approach to solve Wordle puzzles.</p>
                 <div className="chips flex gap-2 flex-wrap mt-2.5">
                   <span className="chip inline-flex items-center gap-2 font-mono text-xs text-muted bg-[#0f1312] px-2.5 py-1.5 rounded-full border border-white/6">Python</span>
@@ -143,7 +144,7 @@ export default function Home() {
           </section>
 
           {/* About Section */}
-          <section id="about" className="section px-6 py-9" aria-labelledby="about-title">
+          <section id="about" className="section px-4 sm:px-6 py-6 sm:py-9" aria-labelledby="about-title">
             <h2 id="about-title" className="text-2xl m-0 mb-3.5 tracking-wide">About</h2>
             <div className="card col-span-1 col-start-1 col-end-[-1] bg-paper border border-white/6 rounded-custom p-4 shadow-custom">
               <p className="m-0">I'm a senior CS student at UCI (graduating early, Fall 2025) who loves crafting tools and experiences that help communities connect. I build with TypeScript, React/Next.js, and Firebase — and I care a lot about clarity, performance, and gentle UX. I also host a short weekly podcast called <em>Wisdom Wednesday</em>.</p>
@@ -151,18 +152,18 @@ export default function Home() {
           </section>
 
           {/* Contact Section */}
-          <section id="contact" className="section px-6 py-9" aria-labelledby="contact-title">
+          <section id="contact" className="section px-4 sm:px-6 py-6 sm:py-9" aria-labelledby="contact-title">
             <h2 id="contact-title" className="text-2xl m-0 mb-3.5 tracking-wide">Contact</h2>
-            <div className="card flex items-center justify-between gap-4 bg-paper border border-white/6 rounded-custom p-4 shadow-custom">
+            <div className="card flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 bg-paper border border-white/6 rounded-custom p-4 shadow-custom">
               <div>
-                <p className="m-0">Open to internships and collaborations starting April 2026. Best reached via email.</p>
+                <p className="m-0">Open to full-time positions starting 2026. Best reached via email.</p>
                 <div className="social flex gap-3 mt-2.5">
                   <a href="mailto:hello@calebyang.dev" className="chip inline-flex items-center gap-2 font-mono text-xs text-muted bg-[#0f1312] px-2.5 py-1.5 rounded-full border border-white/6">Email</a>
                   <a href="https://github.com/calebjyang" className="chip inline-flex items-center gap-2 font-mono text-xs text-muted bg-[#0f1312] px-2.5 py-1.5 rounded-full border border-white/6" target="_blank" rel="noopener">GitHub</a>
                   <a href="https://www.linkedin.com/in/calebjyang/" className="chip inline-flex items-center gap-2 font-mono text-xs text-muted bg-[#0f1312] px-2.5 py-1.5 rounded-full border border-white/6" target="_blank" rel="noopener">LinkedIn</a>
                 </div>
               </div>
-              <a className="btn btn-primary inline-flex items-center gap-2.5 px-4 py-3 rounded-[14px] border border-white/8 bg-[#171c1b] text-ink font-semibold shadow-[0_6px_20px_rgba(0,0,0,0.25)] transition-all duration-150 hover:-translate-y-0.5 hover:border-white/18 hover:shadow-[0_10px_28px_rgba(0,0,0,0.32)]" href="mailto:hello@calebyang.dev">
+              <a className="btn btn-primary inline-flex items-center justify-center gap-2.5 px-4 py-3 rounded-[14px] border border-white/8 bg-[#171c1b] text-ink font-semibold shadow-[0_6px_20px_rgba(0,0,0,0.25)] transition-all duration-150 hover:-translate-y-0.5 hover:border-white/18 hover:shadow-[0_10px_28px_rgba(0,0,0,0.32)]" href="mailto:hello@calebyang.dev">
                 Let's talk
               </a>
             </div>
@@ -170,10 +171,10 @@ export default function Home() {
         </main>
 
         {/* Footer */}
-        <footer className="col-start-2 text-muted px-6 py-8 pb-15">
-          <div className="foot-grid grid grid-cols-[1fr_auto] items-center">
+        <footer className="col-start-2 text-muted px-4 sm:px-6 py-8 pb-15">
+          <div className="foot-grid grid grid-cols-1 sm:grid-cols-[1fr_auto] items-center gap-4 sm:gap-0">
             <small>© {year} Caleb Yang. Built with love, tea, and tidy pull requests.</small>
-            <div className="social flex gap-3">
+            <div className="social flex gap-3 justify-center sm:justify-start">
               <a href="#" className="opacity-85 hover:opacity-100 transition-opacity">RSS</a>
               <a href="#" className="opacity-85 hover:opacity-100 transition-opacity">/now</a>
               <a href="#secret" id="secret" className="opacity-85 hover:opacity-100 transition-opacity" onClick={(e) => { e.preventDefault(); toggleLofi(); }}>?</a>
