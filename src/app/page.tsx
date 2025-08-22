@@ -46,10 +46,10 @@ export default function Home() {
           <section className="hero grid grid-cols-1 min-[820px]:grid-cols-[1.05fr_0.95fr] gap-7 items-center px-6 py-14 min-[820px]:py-14" aria-labelledby="intro">
             <div>
               <h1 id="intro" className="text-4xl min-[820px]:text-[42px] leading-tight m-0 mb-1.5 tracking-wide">
-                Hi, I'm Caleb — I build fast, friendly web apps.
+                Hi, I'm Caleb — I build apps that amaze and delight.
               </h1>
               <p className="tagline text-muted m-0 mb-4.5">
-                Clean code, cozy UX, and a sprinkle of retro delight. Currently shipping with Next.js, Firebase, and friends.
+              I have a mission-driven mindset, collaborative spirit, and a passion for building products that make an impact. Let's create something together!
               </p>
               <div className="cta-row flex gap-3 flex-wrap">
                 <a className="btn btn-primary inline-flex items-center gap-2.5 px-4 py-3 rounded-[14px] border border-white/8 bg-[#171c1b] text-ink font-semibold shadow-[0_6px_20px_rgba(0,0,0,0.25)] transition-all duration-150 hover:-translate-y-0.5 hover:border-white/18 hover:shadow-[0_10px_28px_rgba(0,0,0,0.32)]" href="#projects">
@@ -65,22 +65,22 @@ export default function Home() {
             </div>
             
             {/* Retro Terminal */}
-            <div className="kiosk bg-gradient-to-b from-[#171c1b] to-[#0f1312] border border-white/6 rounded-custom shadow-custom relative overflow-hidden" role="group" aria-label="Retro Preview">
-              <div className="before:content-[''] before:absolute before:inset-0 before:bg-[repeating-linear-gradient(to_bottom,rgba(255,255,255,0.04),rgba(255,255,255,0.04)_2px,transparent_2px,transparent_4px)] before:pointer-events-none before:mix-blend-soft-light" />
-              <div className="kiosk-head flex items-center gap-2.5 px-4 py-3.5 border-b border-white/6">
-                <span className="led w-2 h-2 rounded-full bg-peach shadow-[0_0_10px_rgba(240,183,164,0.8)]" aria-hidden="true" />
-                <div className="tabs flex gap-2">
-                  <span className="tab font-mono text-xs tracking-wide px-2.5 py-1.5 rounded-[10px] bg-[#121615] text-muted border border-white/6 active:text-ink active:border-white/14">~/projects</span>
-                  <span className="tab font-mono text-xs tracking-wide px-2.5 py-1.5 rounded-[10px] bg-[#121615] text-muted border border-white/6">~/blog</span>
-                  <span className="tab font-mono text-xs tracking-wide px-2.5 py-1.5 rounded-[10px] bg-[#121615] text-muted border border-white/6">~/about</span>
+                          <div className="kiosk bg-gradient-to-b from-[#171c1b] to-[#0f1312] border border-white/6 rounded-custom shadow-custom relative overflow-hidden" role="group" aria-label="Retro Preview">
+                <div className="before:content-[''] before:absolute before:inset-0 before:bg-[repeating-linear-gradient(to_bottom,rgba(255,255,255,0.04),rgba(255,255,255,0.04)_2px,transparent_2px,transparent_4px)] before:pointer-events-none before:mix-blend-soft-light" />
+                <div className="kiosk-head flex items-center justify-center px-4 py-1.5 relative">
+                  <span className="text-xs text-muted font-mono">Caleb's Terminal</span>
+                  <div className="absolute right-4 flex items-center gap-1.5">
+                    <span className="w-3 h-3 rounded-full bg-[#ff5f56] opacity-60"></span>
+                    <span className="w-3 h-3 rounded-full bg-[#ffbd2e] opacity-60"></span>
+                    <span className="w-3 h-3 rounded-full bg-[#27ca3f] opacity-60"></span>
+                  </div>
                 </div>
-              </div>
-              <div className="screen p-4">
+                <div className="screen p-4">
                 <div className="terminal font-mono text-sm bg-[#0b0f0e] border border-white/6 rounded-[14px] p-4 text-yellow min-h-[220px] relative overflow-auto">
                   <div>$ npm run caleb</div>
                   <div className="mt-2.5 text-muted">&gt; next dev — ready on <span className="text-teal">http://localhost:3000</span></div>
-                  <div>&gt; connected to production branch...</div>
-                  <div>&gt; loading: <span className="text-peach">AAConnect</span>, <span className="text-peach">WebRegRet</span>, <span className="text-peach">Texas Hold Your Horses</span></div>
+                  <div>&gt; compiled successfully!</div>
+                  <div>&gt; loading: <span className="text-peach">AAConnect</span>, <span className="text-peach">WebRegRet</span>, and 2 others...</div>
                   <div className="mt-3 text-muted">&gt; enjoy your stay ;)</div>
                   <div className="mt-2">$ <span className="caret inline-block w-2 h-[1.1em] bg-yellow ml-1 animate-blink align-text-bottom" /></div>
                 </div>
@@ -94,7 +94,9 @@ export default function Home() {
             <div className="projects grid grid-cols-1 sm:grid-cols-2 gap-4">
               {/* Project 1 */}
               <article className="card bg-paper border border-white/6 rounded-custom p-3 sm:p-4 shadow-custom transition-all duration-150 hover:-translate-y-0.5 hover:border-white/12">
-                <a className="thumb block aspect-video rounded-xl overflow-hidden bg-gradient-to-br from-teal/18 to-peach/18 border border-white/6 mb-3" href="#" aria-label="AAConnect preview" />
+                <a href="https://aa-connect-xi.vercel.app/" target="_blank" rel="noopener noreferrer" className="thumb block aspect-video rounded-xl overflow-hidden object-cover border border-white/6 mb-3">
+                  <img src="/images/aaconnect-screenshot.png" alt="AAConnect app interface showing Quick Actions and Upcoming Events" className="w-full h-full object-cover" />
+                </a>
                 <h3 className="m-0 mb-1.5">AAConnect</h3>
                 <p className="m-0 text-muted">Next.js + Firebase app to centralize fellowship events, signups, and ride coordination with an auto‑carpool algorithm.</p>
                 <div className="chips flex gap-2 flex-wrap mt-2.5">
@@ -107,7 +109,9 @@ export default function Home() {
 
               {/* Project 2 */}
               <article className="card bg-paper border border-white/6 rounded-custom p-3 sm:p-4 shadow-custom transition-all duration-150 hover:-translate-y-0.5 hover:border-white/12">
-                <a className="thumb block aspect-video rounded-xl overflow-hidden bg-gradient-to-br from-teal/18 to-peach/18 border border-white/6 mb-3" href="#" aria-label="WebRegRet preview" />
+                <a href="https://webregret.vercel.app/" target="_blank" rel="noopener noreferrer" className="thumb block aspect-video rounded-xl overflow-hidden object-cover border border-white/6 mb-3">
+                  <img src="/images/webregret-screenshot.png" alt="WebRegRet UCI tuition-waste calculator interface" className="w-full h-full object-cover" />
+                </a>
                 <h3 className="m-0 mb-1.5">WebRegRet</h3>
                 <p className="m-0 text-muted">A quirky UCI tuition‑waste calculator — crisp UI, clear messaging, and surprisingly useful insights for students.</p>
                 <div className="chips flex gap-2 flex-wrap mt-2.5">
@@ -119,25 +123,27 @@ export default function Home() {
 
               {/* Project 3 */}
               <article className="card bg-paper border border-white/6 rounded-custom p-3 sm:p-4 shadow-custom transition-all duration-150 hover:-translate-y-0.5 hover:border-white/12">
-                <a className="thumb block aspect-video rounded-xl overflow-hidden bg-gradient-to-br from-teal/18 to-peach/18 border border-white/6 mb-3" href="#" aria-label="Texas Hold Your Horses preview" />
+                <a href="https://double-a-discourse.vercel.app/" target="_blank" rel="noopener noreferrer" className="thumb block aspect-video rounded-xl overflow-hidden object-cover border border-white/6 mb-3">
+                  <img src="/images/double-a-discourse-screenshot.png" alt="Double-A-Discourse podcast hosting site interface" className="w-full h-full object-cover" />
+                </a>
+                <h3 className="m-0 mb-1.5">Double-A-Discourse Podcast</h3>
+                <p className="m-0 text-muted">A hosting site for my podcast, where I interview guests about their backgrounds, stories, and faith journeys</p>
+                <div className="chips flex gap-2 flex-wrap mt-2.5">
+                  <span className="chip inline-flex items-center gap-2 font-mono text-xs text-muted bg-[#0f1312] px-2.5 py-1.5 rounded-full border border-white/6">Audio Player</span>
+                  <span className="chip inline-flex items-center gap-2 font-mono text-xs text-muted bg-[#0f1312] px-2.5 py-1.5 rounded-full border border-white/6">Branding</span>
+                  <span className="chip inline-flex items-center gap-2 font-mono text-xs text-muted bg-[#0f1312] px-2.5 py-1.5 rounded-full border border-white/6">Scheduling</span>
+                </div>
+              </article>
+
+              {/* Project 4 */}
+              <article className="card bg-paper border border-white/6 rounded-custom p-3 sm:p-4 shadow-custom transition-all duration-150 hover:-translate-y-0.5 hover:border-white/12">
+                <img src="/images/texas-hold-screenshot.png" alt="Texas Hold Your Horses multiplayer card game interface" className="thumb block aspect-video rounded-xl overflow-hidden object-cover border border-white/6 mb-3" />
                 <h3 className="m-0 mb-1.5">Texas Hold Your Horses</h3>
                 <p className="m-0 text-muted">Multiplayer web‑based card game with horse‑race‑themed betting rounds and real‑time play.</p>
                 <div className="chips flex gap-2 flex-wrap mt-2.5">
                   <span className="chip inline-flex items-center gap-2 font-mono text-xs text-muted bg-[#0f1312] px-2.5 py-1.5 rounded-full border border-white/6">WebSockets</span>
                   <span className="chip inline-flex items-center gap-2 font-mono text-xs text-muted bg-[#0f1312] px-2.5 py-1.5 rounded-full border border-white/6">Node</span>
                   <span className="chip inline-flex items-center gap-2 font-mono text-xs text-muted bg-[#0f1312] px-2.5 py-1.5 rounded-full border border-white/6">Game Design</span>
-                </div>
-              </article>
-
-              {/* Project 4 */}
-              <article className="card bg-paper border border-white/6 rounded-custom p-3 sm:p-4 shadow-custom transition-all duration-150 hover:-translate-y-0.5 hover:border-white/12">
-                <a className="thumb block aspect-video rounded-xl overflow-hidden bg-gradient-to-br from-teal/18 to-peach/18 border border-white/6 mb-3" href="#" aria-label="Kernel Simulator preview" />
-                <h3 className="m-0 mb-1.5">Wordle AI Solver</h3>
-                <p className="m-0 text-muted">A Python script that uses an entropy-based information theory approach to solve Wordle puzzles.</p>
-                <div className="chips flex gap-2 flex-wrap mt-2.5">
-                  <span className="chip inline-flex items-center gap-2 font-mono text-xs text-muted bg-[#0f1312] px-2.5 py-1.5 rounded-full border border-white/6">Python</span>
-                  <span className="chip inline-flex items-center gap-2 font-mono text-xs text-muted bg-[#0f1312] px-2.5 py-1.5 rounded-full border border-white/6">OS</span>
-                  <span className="chip inline-flex items-center gap-2 font-mono text-xs text-muted bg-[#0f1312] px-2.5 py-1.5 rounded-full border border-white/6">Scheduling</span>
                 </div>
               </article>
             </div>
@@ -147,7 +153,7 @@ export default function Home() {
           <section id="about" className="section px-4 sm:px-6 py-6 sm:py-9" aria-labelledby="about-title">
             <h2 id="about-title" className="text-2xl m-0 mb-3.5 tracking-wide">About</h2>
             <div className="card col-span-1 col-start-1 col-end-[-1] bg-paper border border-white/6 rounded-custom p-4 shadow-custom">
-              <p className="m-0">I'm a senior CS student at UCI (graduating early, Fall 2025) who loves crafting tools and experiences that help communities connect. I build with TypeScript, React/Next.js, and Firebase — and I care a lot about clarity, performance, and gentle UX. I also host a short weekly podcast called <em>Wisdom Wednesday</em>.</p>
+              <p className="m-0">Hey there! I’m Caleb Yang, a CS senior at UC Irvine (graduating Dec. 2025). I build fast, friendly web apps with TypeScript, Next.js, and Firebase — prioritizing details like performance, accessibility, and clean, testable code. I love working with people, so don't hesitate to reach out!</p>
             </div>
           </section>
 
