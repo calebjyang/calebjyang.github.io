@@ -1,20 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=IBM+Plex+Mono:wght@300;400;600&display=swap');
 @import "tailwindcss";
 
-@layer base {
-  :root {
-    /* Cozy lo‑fi palette: muted teal, sand, paper, ink, accent peach */
-    --bg: #0e1211;           /* deep charcoal for dark cozy base */
-    --paper: #121615;        /* slightly lighter card bg */
-    --ink: #e8efe9;          /* warm off‑white text */
-    --muted: #a9b7ae;        /* subtle secondary text */
-    --teal: #6ab8a8;         /* soft teal accent */
-    --peach: #f0b7a4;        /* warm peach accent */
-    --yellow: #f5e6a7;       /* lo‑fi sticky note yellow */
-    --shadow: 0 10px 30px rgba(0,0,0,.35);
-    --radius: 18px;
-  }
+@theme {
+  --color-bg: #0e1211;
+  --color-paper: #121615;
+  --color-ink: #e8efe9;
+  --color-muted: #a9b7ae;
+  --color-teal: #6ab8a8;
+  --color-peach: #f0b7a4;
+  --color-yellow: #f5e6a7;
+  
+  --font-family-inter: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+  --font-family-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  
+  --shadow-custom: 0 10px 30px rgba(0,0,0,.35);
+  --radius-custom: 18px;
+}
 
+@layer base {
   * {
     box-sizing: border-box;
   }
@@ -25,9 +28,9 @@
 
   body {
     margin: 0;
-    background: radial-gradient(1200px 700px at 20% 10%, #151a19 0%, var(--bg) 60%), var(--bg);
-    color: var(--ink);
-    font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+    background: radial-gradient(1200px 700px at 20% 10%, #151a19 0%, var(--color-bg) 60%), var(--color-bg);
+    color: var(--color-ink);
+    font-family: var(--font-family-inter);
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -42,5 +45,34 @@
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+  
+  .bg-bg { background-color: var(--color-bg); }
+  .bg-paper { background-color: var(--color-paper); }
+  .text-ink { color: var(--color-ink); }
+  .text-muted { color: var(--color-muted); }
+  .text-teal { color: var(--color-teal); }
+  .text-peach { color: var(--color-peach); }
+  .text-yellow { color: var(--color-yellow); }
+  .font-inter { font-family: var(--font-family-inter); }
+  .font-mono { font-family: var(--font-family-mono); }
+  .shadow-custom { box-shadow: var(--shadow-custom); }
+  .rounded-custom { border-radius: var(--radius-custom); }
+  
+  .animate-pulse {
+    animation: pulse 2.6s ease-in-out infinite;
+  }
+  
+  .animate-blink {
+    animation: blink 1.2s steps(1,end) infinite;
+  }
+  
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.3); opacity: 0.7; }
+  }
+  
+  @keyframes blink {
+    50% { opacity: 0; }
   }
 }
