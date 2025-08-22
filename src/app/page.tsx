@@ -131,8 +131,8 @@ export default function Home() {
               {/* Project 4 */}
               <article className="card col-span-6 min-[820px]:col-span-6 col-span-12 bg-paper border border-white/6 rounded-custom p-4 shadow-custom transition-all duration-150 hover:-translate-y-0.5 hover:border-white/12">
                 <a className="thumb block aspect-video rounded-xl overflow-hidden bg-gradient-to-br from-teal/18 to-peach/18 border border-white/6" href="#" aria-label="Kernel Simulator preview" />
-                <h3 className="m-3 mb-1.5">CS143A Kernel Simulator</h3>
-                <p className="m-0 text-muted">Priority scheduling, semaphores, and segmented memory with a custom MMU — built in Python for OS coursework.</p>
+                <h3 className="m-3 mb-1.5">Wordle AI Solver</h3>
+                <p className="m-0 text-muted">A Python script that uses an entropy-based information theory approach to solve Wordle puzzles.</p>
                 <div className="chips flex gap-2 flex-wrap mt-2.5">
                   <span className="chip inline-flex items-center gap-2 font-mono text-xs text-muted bg-[#0f1312] px-2.5 py-1.5 rounded-full border border-white/6">Python</span>
                   <span className="chip inline-flex items-center gap-2 font-mono text-xs text-muted bg-[#0f1312] px-2.5 py-1.5 rounded-full border border-white/6">OS</span>
