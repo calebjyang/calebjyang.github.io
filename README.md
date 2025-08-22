@@ -118,4 +118,3 @@ Personal project - feel free to use as inspiration for your own portfolio.
 ---
 
 Built with ❤️, ☕, and tidy pull requests by Caleb Yang
-# Fri Aug 22 06:28:16 PDT 2025
