@@ -13,8 +13,9 @@ export default function Home() {
   }, [])
 
   const toggleLofi = () => {
-    setIsLofiOn(!isLofiOn)
-    setToastMessage(isLofiOn ? 'lo‑fi off' : 'lo‑fi on ☕')
+    const newLofiState = !isLofiOn
+    setIsLofiOn(newLofiState)
+    setToastMessage(newLofiState ? 'lo‑fi on ☕' : 'lo‑fi off')
     setShowToast(true)
     setTimeout(() => setShowToast(false), 1500)
   }
@@ -36,7 +37,6 @@ export default function Home() {
               <a href="#projects" className="opacity-85 hover:opacity-100 font-medium transition-opacity">Projects</a>
               <a href="#about" className="opacity-85 hover:opacity-100 font-medium transition-opacity">About</a>
               <a href="#contact" className="opacity-85 hover:opacity-100 font-medium transition-opacity">Contact</a>
-              <a href="#secret" aria-label="Secret" className="opacity-85 hover:opacity-100 font-medium transition-opacity">?</a>
             </nav>
           </nav>
         </header>
@@ -51,17 +51,17 @@ export default function Home() {
               <p className="tagline text-muted m-0 mb-4.5">
               I have a mission-driven mindset, collaborative spirit, and a passion for building products that make an impact. Let's create something together!
               </p>
-              <div className="cta-row flex gap-3 flex-wrap">
-                <a className="btn btn-primary inline-flex items-center gap-2.5 px-4 py-3 rounded-[14px] border border-white/8 bg-[#171c1b] text-ink font-semibold shadow-[0_6px_20px_rgba(0,0,0,0.25)] transition-all duration-150 hover:-translate-y-0.5 hover:border-white/18 hover:shadow-[0_10px_28px_rgba(0,0,0,0.32)]" href="#projects">
-                  View Projects
-                </a>
-                <a className="btn inline-flex items-center gap-2.5 px-4 py-3 rounded-[14px] border border-white/8 bg-[#171c1b] text-ink font-semibold shadow-[0_6px_20px_rgba(0,0,0,0.25)] transition-all duration-150 hover:-translate-y-0.5 hover:border-white/18 hover:shadow-[0_10px_28px_rgba(0,0,0,0.32)]" href="mailto:hello@calebyang.dev">
-                  Email Me
-                </a>
-                <a className="btn inline-flex items-center gap-2.5 px-4 py-3 rounded-[14px] border border-white/8 bg-[#171c1b] text-ink font-semibold shadow-[0_6px_20px_rgba(0,0,0,0.25)] transition-all duration-150 hover:-translate-y-0.5 hover:border-white/18 hover:shadow-[0_10px_28px_rgba(0,0,0,0.32)]" href="#resume">
-                  Résumé
-                </a>
-              </div>
+                              <div className="cta-row flex gap-3 flex-wrap">
+                  <a className="btn btn-primary inline-flex items-center gap-2.5 px-4 py-3 rounded-[14px] border border-white/8 bg-[#171c1b] text-ink font-semibold shadow-[0_6px_20px_rgba(0,0,0,0.25)] transition-all duration-150 hover:-translate-y-0.5 hover:border-white/18 hover:shadow-[0_10px_28px_rgba(0,0,0,0.32)]" href="https://github.com/calebjyang?tab=repositories" target="_blank" rel="noopener noreferrer">
+                    GitHub
+                  </a>
+                  <a className="btn inline-flex items-center gap-2.5 px-4 py-3 rounded-[14px] border border-white/8 bg-[#171c1b] text-ink font-semibold shadow-[0_6px_20px_rgba(0,0,0,0.25)] transition-all duration-150 hover:-translate-y-0.5 hover:border-white/18 hover:shadow-[0_10px_28px_rgba(0,0,0,0.32)]" href="https://www.linkedin.com/in/calebjyang/" target="_blank" rel="noopener noreferrer">
+                    LinkedIn
+                  </a>
+                  <a className="btn inline-flex items-center gap-2.5 px-4 py-3 rounded-[14px] border border-white/8 bg-[#171c1b] text-ink font-semibold shadow-[0_6px_20px_rgba(0,0,0,0.25)] transition-all duration-150 hover:-translate-y-0.5 hover:border-white/18 hover:shadow-[0_10px_28px_rgba(0,0,0,0.32)]" href="/resume">
+                    Résumé
+                  </a>
+                </div>
             </div>
             
             {/* Retro Terminal */}
@@ -90,7 +90,7 @@ export default function Home() {
 
           {/* Projects Section */}
           <section id="projects" className="section px-4 sm:px-6 py-6 sm:py-9" aria-labelledby="proj">
-            <h2 id="proj" className="text-2xl m-0 mb-3.5 tracking-wide">Selected Projects</h2>
+            <h2 id="proj" className="text-2xl m-0 mb-3.5 tracking-wide">Featured Projects</h2>
             <div className="projects grid grid-cols-1 sm:grid-cols-2 gap-4">
               {/* Project 1 */}
               <article className="card bg-paper border border-white/6 rounded-custom p-3 sm:p-4 shadow-custom transition-all duration-150 hover:-translate-y-0.5 hover:border-white/12">
@@ -98,7 +98,7 @@ export default function Home() {
                   <img src="/images/aaconnect-screenshot.png" alt="AAConnect app interface showing Quick Actions and Upcoming Events" className="w-full h-full object-cover" />
                 </a>
                 <h3 className="m-0 mb-1.5">AAConnect</h3>
-                <p className="m-0 text-muted">Next.js + Firebase app to centralize fellowship events, signups, and ride coordination with an auto‑carpool algorithm.</p>
+                <p className="m-0 text-muted">Next.js + Firebase cross-platform app to streamline community events, signups, and ride coordination with an auto‑carpool algorithm.</p>
                 <div className="chips flex gap-2 flex-wrap mt-2.5">
                   <span className="chip inline-flex items-center gap-2 font-mono text-xs text-muted bg-[#0f1312] px-2.5 py-1.5 rounded-full border border-white/6">Next.js</span>
                   <span className="chip inline-flex items-center gap-2 font-mono text-xs text-muted bg-[#0f1312] px-2.5 py-1.5 rounded-full border border-white/6">Firebase</span>
@@ -113,7 +113,7 @@ export default function Home() {
                   <img src="/images/webregret-screenshot.png" alt="WebRegRet UCI tuition-waste calculator interface" className="w-full h-full object-cover" />
                 </a>
                 <h3 className="m-0 mb-1.5">WebRegRet</h3>
-                <p className="m-0 text-muted">A quirky UCI tuition‑waste calculator — crisp UI, clear messaging, and surprisingly useful insights for students.</p>
+                <p className="m-0 text-muted">A sarcastic college tuition‑waste calculator — engaging UI, intuitive design, and surprisingly useful insights for students.</p>
                 <div className="chips flex gap-2 flex-wrap mt-2.5">
                   <span className="chip inline-flex items-center gap-2 font-mono text-xs text-muted bg-[#0f1312] px-2.5 py-1.5 rounded-full border border-white/6">TypeScript</span>
                   <span className="chip inline-flex items-center gap-2 font-mono text-xs text-muted bg-[#0f1312] px-2.5 py-1.5 rounded-full border border-white/6">React</span>
@@ -127,17 +127,17 @@ export default function Home() {
                   <img src="/images/double-a-discourse-screenshot.png" alt="Double-A-Discourse podcast hosting site interface" className="w-full h-full object-cover" />
                 </a>
                 <h3 className="m-0 mb-1.5">Double-A-Discourse Podcast</h3>
-                <p className="m-0 text-muted">A hosting site for my podcast, where I interview guests about their backgrounds, stories, and faith journeys</p>
+                <p className="m-0 text-muted">A hosting site for my podcast, where I interview guests about their backgrounds, stories, and faith journeys.</p>
                 <div className="chips flex gap-2 flex-wrap mt-2.5">
                   <span className="chip inline-flex items-center gap-2 font-mono text-xs text-muted bg-[#0f1312] px-2.5 py-1.5 rounded-full border border-white/6">Audio Player</span>
                   <span className="chip inline-flex items-center gap-2 font-mono text-xs text-muted bg-[#0f1312] px-2.5 py-1.5 rounded-full border border-white/6">Branding</span>
-                  <span className="chip inline-flex items-center gap-2 font-mono text-xs text-muted bg-[#0f1312] px-2.5 py-1.5 rounded-full border border-white/6">Scheduling</span>
+                  <span className="chip inline-flex items-center gap-2 font-mono text-xs text-muted bg-[#0f1312] px-2.5 py-1.5 rounded-full border border-white/6">Social Media</span>
                 </div>
               </article>
 
               {/* Project 4 */}
               <article className="card bg-paper border border-white/6 rounded-custom p-3 sm:p-4 shadow-custom transition-all duration-150 hover:-translate-y-0.5 hover:border-white/12">
-                <img src="/images/texas-hold-screenshot.png" alt="Texas Hold Your Horses multiplayer card game interface" className="thumb block aspect-video rounded-xl overflow-hidden object-cover border border-white/6 mb-3" />
+                <img src="/images/texas-hold-screenshot.png" alt="Texas Hold-Your-Horses multiplayer card game interface" className="thumb block aspect-video rounded-xl overflow-hidden object-cover border border-white/6 mb-3" />
                 <h3 className="m-0 mb-1.5">Texas Hold Your Horses</h3>
                 <p className="m-0 text-muted">Multiplayer web‑based card game with horse‑race‑themed betting rounds and real‑time play.</p>
                 <div className="chips flex gap-2 flex-wrap mt-2.5">
@@ -153,7 +153,7 @@ export default function Home() {
           <section id="about" className="section px-4 sm:px-6 py-6 sm:py-9" aria-labelledby="about-title">
             <h2 id="about-title" className="text-2xl m-0 mb-3.5 tracking-wide">About</h2>
             <div className="card col-span-1 col-start-1 col-end-[-1] bg-paper border border-white/6 rounded-custom p-4 shadow-custom">
-              <p className="m-0">Hey there! I’m Caleb Yang, a CS senior at UC Irvine (graduating Dec. 2025). I build fast, friendly web apps with TypeScript, Next.js, and Firebase — prioritizing details like performance, accessibility, and clean, testable code. I love working with people, so don't hesitate to reach out!</p>
+              <p className="m-0">Hey there! I'm I’m Caleb — a CS senior at UC Irvine (graduating Dec 2025). I love bringing ideas to life with 1's and 0's, but even more than that, I love building things that bring people together. Whether it’s coding, hosting my podcast, or serving in my campus fellowship, I’m always chasing ways to connect people and create something meaningful. Beyond that, you can probably find me playing Spikeball or jamming out with my friends. I’m excited for what’s ahead, and I’d love to meet others with a similar heart for creativity, community, and powerful storytelling.</p>
             </div>
           </section>
 
@@ -163,14 +163,9 @@ export default function Home() {
             <div className="card flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 bg-paper border border-white/6 rounded-custom p-4 shadow-custom">
               <div>
                 <p className="m-0">Open to full-time positions starting 2026. Best reached via email.</p>
-                <div className="social flex gap-3 mt-2.5">
-                  <a href="mailto:hello@calebyang.dev" className="chip inline-flex items-center gap-2 font-mono text-xs text-muted bg-[#0f1312] px-2.5 py-1.5 rounded-full border border-white/6">Email</a>
-                  <a href="https://github.com/calebjyang" className="chip inline-flex items-center gap-2 font-mono text-xs text-muted bg-[#0f1312] px-2.5 py-1.5 rounded-full border border-white/6" target="_blank" rel="noopener">GitHub</a>
-                  <a href="https://www.linkedin.com/in/calebjyang/" className="chip inline-flex items-center gap-2 font-mono text-xs text-muted bg-[#0f1312] px-2.5 py-1.5 rounded-full border border-white/6" target="_blank" rel="noopener">LinkedIn</a>
-                </div>
               </div>
-              <a className="btn btn-primary inline-flex items-center justify-center gap-2.5 px-4 py-3 rounded-[14px] border border-white/8 bg-[#171c1b] text-ink font-semibold shadow-[0_6px_20px_rgba(0,0,0,0.25)] transition-all duration-150 hover:-translate-y-0.5 hover:border-white/18 hover:shadow-[0_10px_28px_rgba(0,0,0,0.32)]" href="mailto:hello@calebyang.dev">
-                Let's talk
+              <a className="btn btn-primary inline-flex items-center justify-center gap-2.5 px-4 py-3 rounded-[14px] border border-white/8 bg-[#171c1b] text-ink font-semibold shadow-[0_6px_20px_rgba(0,0,0,0.25)] transition-all duration-150 hover:-translate-y-0.5 hover:border-white/18 hover:shadow-[0_10px_28px_rgba(0,0,0,0.32)]" href="mailto:kb@jaymoo.com">
+                Let's talk!
               </a>
             </div>
           </section>
@@ -181,9 +176,6 @@ export default function Home() {
           <div className="foot-grid grid grid-cols-1 sm:grid-cols-[1fr_auto] items-center gap-4 sm:gap-0">
             <small>© {year} Caleb Yang. Built with love, tea, and tidy pull requests.</small>
             <div className="social flex gap-3 justify-center sm:justify-start">
-              <a href="#" className="opacity-85 hover:opacity-100 transition-opacity">RSS</a>
-              <a href="#" className="opacity-85 hover:opacity-100 transition-opacity">/now</a>
-              <a href="#secret" id="secret" className="opacity-85 hover:opacity-100 transition-opacity" onClick={(e) => { e.preventDefault(); toggleLofi(); }}>?</a>
             </div>
           </div>
         </footer>
@@ -191,7 +183,7 @@ export default function Home() {
 
       {/* Toast Notification */}
       {showToast && (
-        <div className="fixed left-1/2 bottom-[22px] transform -translate-x-1/2 bg-[#0f1312] text-ink px-3.5 py-2.5 border border-white/10 rounded-xl shadow-custom z-[9999] opacity-0 animate-in slide-in-from-bottom-2 duration-200">
+        <div className="fixed left-1/2 bottom-[22px] transform -translate-x-1/2 bg-[#0f1312] text-ink px-3.5 py-2.5 border border-white/10 rounded-xl shadow-custom z-[9999] animate-in slide-in-from-bottom-2 duration-200">
           {toastMessage}
         </div>
       )}
