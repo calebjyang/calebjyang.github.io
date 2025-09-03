@@ -6,6 +6,6 @@ I'm Caleb, a senior CS student at UCI who's passionate about building tools that
 
 This portfolio showcases some of my projects and gives you a sense of who I am as a developer. Feel free to reach out if you'd like to chat about opportunities or just say hello!
 
-🌐 [calebjyang.github.io](https://calebjyang.github.io)
+🌐 [https://calebyang.dev/](calebyang.dev)
 
 Thanks for stopping by! ✨
