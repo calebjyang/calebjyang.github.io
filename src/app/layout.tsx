@@ -2,20 +2,20 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Caleb Yang — Software Engineer',
+  title: "Caleb's Developer Portfolio",
   description: 'Software engineer portfolio — clean, minimal, cozy lo‑fi retro vibes.',
   keywords: ['software engineer', 'web developer', 'portfolio', 'react', 'next.js', 'typescript'],
   authors: [{ name: 'Caleb Yang' }],
   creator: 'Caleb Yang',
   openGraph: {
-    title: 'Caleb Yang — Software Engineer',
+    title: "Caleb's Developer Portfolio",
     description: 'Software engineer portfolio — clean, minimal, cozy lo‑fi retro vibes.',
     type: 'website',
     url: 'https://calebjyang.github.io',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Caleb Yang — Software Engineer',
+    title: "Caleb's Developer Portfolio",
     description: 'Software engineer portfolio — clean, minimal, cozy lo‑fi retro vibes.',
   },
 }
