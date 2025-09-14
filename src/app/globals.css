@@ -95,4 +95,22 @@
       transform: translateY(0) translateX(-50%);
     }
   }
+
+  /* Custom dark scrollbar for terminal */
+  .terminal::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .terminal::-webkit-scrollbar-track {
+    background: #0b0f0e;
+  }
+  
+  .terminal::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+  }
+  
+  .terminal::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.15);
+  }
 }
