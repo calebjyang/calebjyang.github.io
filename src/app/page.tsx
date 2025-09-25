@@ -273,7 +273,7 @@ export default function Home() {
             <h2 id="contact-title" className="text-2xl m-0 mb-3.5 tracking-wide">Contact</h2>
             <div className="card flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 bg-paper border border-white/6 rounded-custom p-4 shadow-custom">
               <div>
-                <p className="m-0">I'm open to full-time positions starting 2026! You can reach me via email or LinkedIn.</p>
+                <p className="m-0">I'm open to full-time positions starting spring 2026! You can reach me via email or LinkedIn.</p>
               </div>
               <a className="btn btn-primary inline-flex items-center justify-center gap-2.5 px-4 py-3 rounded-[14px] border border-white/8 bg-[#171c1b] text-ink font-semibold shadow-[0_6px_20px_rgba(0,0,0,0.25)] transition-all duration-150 hover:-translate-y-0.5 hover:border-white/18 hover:shadow-[0_10px_28px_rgba(0,0,0,0.32)]" href="mailto:kb@jaymoo.com">
                 Let's talk!
