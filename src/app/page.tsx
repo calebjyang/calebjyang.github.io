@@ -264,7 +264,7 @@ export default function Home() {
           <section id="about" className="section px-4 sm:px-6 py-6 sm:py-9" aria-labelledby="about-title">
             <h2 id="about-title" className="text-2xl m-0 mb-3.5 tracking-wide">About</h2>
             <div className="card col-span-1 col-start-1 col-end-[-1] bg-paper border border-white/6 rounded-custom p-4 shadow-custom">
-              <p className="m-0">Hey there! I'm I’m Caleb — a CS senior at UC Irvine (graduating Dec 2025). I love bringing ideas to life with 1's and 0's, but even more than that, I love building things that bring people together. Whether it’s coding, hosting my podcast, or serving in my campus fellowship, I’m always chasing ways to connect people and create something meaningful. Beyond that, you can probably find me playing Spikeball or jamming out with my friends. I’m excited for what’s ahead, and I’d love to meet others with a similar heart for creativity, community, and powerful storytelling.</p>
+              <p className="m-0">Hey there! I'm Caleb — a CS senior at UC Irvine (graduating Dec 2025). I love bringing ideas to life with 1's and 0's, but even more than that, I love building things that bring people together. Whether it’s coding, hosting my podcast, or serving in my campus fellowship, I’m always chasing ways to connect people and create something meaningful. Beyond that, you can probably find me playing Spikeball or jamming out with my friends. I’m excited for what’s ahead, and I’d love to meet others with a similar heart for creativity, community, and powerful storytelling.</p>
             </div>
           </section>
 
@@ -285,7 +285,7 @@ export default function Home() {
         {/* Footer */}
         <footer className="col-start-2 text-muted px-4 sm:px-6 py-8 pb-15">
           <div className="foot-grid grid grid-cols-1 sm:grid-cols-[1fr_auto] items-center gap-4 sm:gap-0">
-            <small>© {year} Caleb Yang. Built with love, tea, and tidy pull requests.</small>
+            <small>© {year} Caleb Yang. Built with love and lofi.</small>
             <div className="social flex gap-3 justify-center sm:justify-start">
             </div>
           </div>
